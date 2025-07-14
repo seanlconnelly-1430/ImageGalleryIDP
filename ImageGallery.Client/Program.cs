@@ -49,6 +49,11 @@ builder.Services.AddAuthentication(options =>
     options.ClaimActions.DeleteClaim("idp"); // Remove the idp claim to avoid duplicate claims
     options.Scope.Add("roles"); // Add the roles scope to the OpenID Connect request
     options.ClaimActions.MapJsonKey("role", "role"); // Map the role claim from the IDP to the role claim in the application
+    options.TokenValidationParameters = new()
+    {
+        NameClaimType = "given_name", // Specify the claim type used for the user's name
+        RoleClaimType = "role" // Specify the claim type used for the user's roles
+    };
 });
 
 var app = builder.Build();
