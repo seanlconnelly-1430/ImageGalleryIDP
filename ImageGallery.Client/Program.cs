@@ -47,6 +47,8 @@ builder.Services.AddAuthentication(options =>
     options.ClaimActions.Remove("aud"); // Remove the aud claim to avoid duplicate claims
     options.ClaimActions.DeleteClaim("sid"); // Remove the sid claim to avoid duplicate claims
     options.ClaimActions.DeleteClaim("idp"); // Remove the idp claim to avoid duplicate claims
+    options.Scope.Add("roles"); // Add the roles scope to the OpenID Connect request
+    options.ClaimActions.MapJsonKey("role", "role"); // Map the role claim from the IDP to the role claim in the application
 });
 
 var app = builder.Build();
