@@ -1,0 +1,69 @@
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.rsuser
+*.env
+
+# Build results
+bin/
+obj/
+[Dd]ebug*/
+[Rr]elease*/
+x64/
+x86/
+*.log
+*.tlog
+*.tmp
+*.tmp_proj
+
+# Visual Studio cache and settings
+.vs/
+*.VC.db
+*.VC.opendb
+*.cachefile
+
+# Test results
+TestResult*/
+*.trx
+*.coverage
+*.coveragexml
+
+# NuGet packages
+*.nupkg
+*.snupkg
+packages/
+!packages/build/
+
+# Publish artifacts
+publish/
+*.pubxml
+*.publishproj
+*.azurePubxml
+
+# ReSharper and other IDE extensions
+_ReSharper*/
+*.DotSettings.user
+*.resharper
+
+# Web workbench (Sass)
+.sass-cache/
+
+# Node.js dependencies
+node_modules/
+
+# Backup and upgrade logs
+_Backup*/
+UpgradeLog*.XML
+UpgradeLog*.htm
+
+# SQL Server files
+*.mdf
+*.ldf
+
+# Others
+*.pfx
+*.dbmdl
+*.dbproj.schemaview
+*.jfm
